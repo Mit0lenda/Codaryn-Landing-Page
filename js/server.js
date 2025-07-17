@@ -27,7 +27,6 @@ app.get('/seller', async (_, res) => {
     await db.write();
 
     console.log(`Enviado para: ${link} | Total de cliques: ${db.data.clicks}`);
-
     res.json({
         link,
         clicks: db.data.clicks,
